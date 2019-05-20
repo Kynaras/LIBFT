@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:43:18 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/20 14:21:56 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/20 13:45:23 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/20 14:28:09 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int i)
+#include <stdio.h>
+
+size_t	ft_strlen(char *s)
 {
-	if(i >= 0 && i <= 0177)
-		return (1);
-	else
-		return (0);
+	size_t len = 0;
+
+	while (s[len] != '\0')
+		len++;
+	return(len);
 }
+
