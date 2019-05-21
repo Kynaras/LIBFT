@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+	char s1[] = "Hello";
+	char s2[] = " there";
+	printf("%s", ft_strcat(s1, s2));
+	return(0);
+}

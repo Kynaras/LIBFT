@@ -1,0 +1,6 @@
+int	main()
+{
+	char s1[] = "Hello";
+	char s2[] = " there";
+	printf("%s", ft_strncat(s1, s2, 4));
+}

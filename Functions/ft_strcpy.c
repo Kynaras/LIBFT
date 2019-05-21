@@ -1,4 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/21 09:50:16 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/21 12:16:36 by keverett         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strcpy(char *dest, const char *src)
 {
@@ -11,12 +23,4 @@ char *ft_strcpy(char *dest, const char *src)
     }
     dest[i] = '\0';
     return(dest);
-}
-
-int main()
-{
-    const char *p = "Banana";
-    char apple[6];
-    printf("%s", ft_strcpy(apple, p));
-    return 0;
 }

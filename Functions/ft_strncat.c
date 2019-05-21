@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 07:37:46 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/21 09:40:37 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/21 13:18:58 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/21 15:58:57 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-int	ft_atoi(const char *str)
+char *ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int num; 
-	int i;
-	int sign;
+	
+	size_t i;
+	size_t j;
 
-	num = 0;
 	i = 0;
-	sign = 1;
+	j = 0;
 
-	while (str[i] == '\n' || str[i] == '\f' || str[i] == ' ' || str[i] == '\v' ||
-			str[i] == '\r' || str[i] == '\t')
+	while (s1[i])
 	{
 		i++;
 	}
+	while(s2[j] && j < n)
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	
+	return s1;
+}
 
-	if(str[i] == '-' || str[i] == '+')
-	{
-		if(str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num*10 + str[i] - 48;
-		i++;
-	}
-	num = num * sign;
-	return (num);
+int main()
+{
+	char a[6] = "Hello";
+	char d[] = " Worldnewshour";
+
+	printf("%s", strncat(a, d, 8));
+	
+	return(0);
 }
