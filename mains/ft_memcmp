@@ -1,0 +1,9 @@
+int main()
+{
+	char t[] = "Ha\0plo";
+	char t2[] = "Ha\0nlo";
+
+	printf ("%i\n", ft_memcmp(t, t2, 4));
+	printf("%i\n", memcmp(t, t2, 4));
+	return (0);
+}
