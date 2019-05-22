@@ -1,48 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:18:58 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/22 09:10:23 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/22 10:04:42 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/22 10:28:39 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-char *ft_strncat(char *s1, const char *s2, size_t n)
+void* ft_memcpy(void *dst, const void *src, size_t n)
 {
-	
 	size_t i;
-	size_t j;
+	const char *s = (const char*) src;
+	char *d = (char*) dst;
 
 	i = 0;
-	j = 0;
 
-	while (s1[i])
+	while (i < n)
 	{
+		d[i] = s[i];
 		i++;
 	}
-	while(s2[j] && j < n)
-	{
-		s1[i] = s2[j];
-		i++;
-		j++;
-	}
-	s1[i] = '\0';
-	
-	return s1;
-}
-
-int main()
-{
-	char a[6] = "Hello";
-	char d[] = " Worldnewshour";
-
-	printf("%s", strncat(a, d, 8));
-	
-	return(0);
+	return (dst);
 }

@@ -1,0 +1,8 @@
+int main()
+{
+	char t[] = "Hey hey hey";
+	constar char s[] = "Bye bye bye";
+
+	print("%s\n", ft_memcpy(t, s, 16));
+	return(0);
+}
