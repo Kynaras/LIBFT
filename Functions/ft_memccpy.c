@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:04:42 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/22 13:44:11 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/22 11:03:35 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/22 14:48:48 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void* ft_memcpy(void *dst, const void *src, size_t n)
+void *ft_memccpy(void* dst, const void *src, int c, size_t n)
 {
 	size_t i;
-	const char *s = (const char*) src;
-	char *d = (char*) dst;
+	char *d;
+	const char *s;
+	unsigned char ch;
 
 	i = 0;
+	d = (char*) dst;
+	s = (const char*) src;
+	ch = (unsigned char) c;
 
-	while (i < n)
+	while (i < n && s[i] != ch)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (dst);
+	if (i == n)
+		return (NULL);
+	else
+		return (dst + i + 1);
 }
+

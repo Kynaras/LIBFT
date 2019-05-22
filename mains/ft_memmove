@@ -1,0 +1,7 @@
+int main()
+{
+	char t[] = "DogsCatsPigs";
+	printf("%s\n", ft_memmove(t, t, 9));
+	printf("s\n", memmove(t, t, 9));
+	return (0);
+}
