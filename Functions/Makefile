@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/23 12:48:36 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/23 13:15:33 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ FLAGS = -Wall -Wextra -Werror -c
 
 all: $(NAME)
 
-$(NAME); $(SRC) $(HEADER)
+$(NAME): $(SRC) $(HEADER)
 		gcc $(FLAGS) $(SRC)
 		ar rc $(NAME) $(OBJECTS)
 		ranlib $(NAME)
