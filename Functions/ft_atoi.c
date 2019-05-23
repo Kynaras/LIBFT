@@ -6,11 +6,9 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 07:37:46 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/21 09:40:37 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:49:16 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

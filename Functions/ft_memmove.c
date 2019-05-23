@@ -6,12 +6,11 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:01:29 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/22 14:44:42 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:57:24 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -41,13 +40,3 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-int main()
-{
-	char t[] = "Cats and Dogs";
-	char t1[100];
-//	printf("%s\n", ft_memmove(t1 + 1, t, (strlen(t) + 1)));
-	printf("%s\n", memmove(t1 + 1, t, (strlen(t) + 1)));
-//	printf("%s\n", ft_memmove(t1 + 1, t, (strlen(t) + 1)));
-	printf("%s\n", t1);
-	return(0);
-}

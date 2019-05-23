@@ -6,12 +6,11 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:18:58 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 10:31:36 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:57:53 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char *ft_strncat(char *s1, const char *s2, size_t n)
 {
@@ -35,14 +34,4 @@ char *ft_strncat(char *s1, const char *s2, size_t n)
 	s1[i] = '\0';
 	
 	return s1;
-}
-
-int main()
-{
-	char *t = "Hello";
-	char *d = " Worldnewshour";
-
-	printf("%s", ft_strncat(t, d, 8));
-	
-	return 0;
 }
