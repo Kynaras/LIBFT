@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/23 13:26:29 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/23 16:11:51 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,11 @@ SRC = ft_atoi.c \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_strcat.c \
+		ft_strchr.c \
 		ft_strcpy.c \
 		ft_strdup.c \
 		ft_strlen.c \
+		ft_strlcat.c \
 		ft_strncat.c \
 		ft_strncpy.c \
 		ft_tolower.c \
@@ -51,7 +53,7 @@ clean:
 		rm -f $(OBJECTS)
 
 fclean: clean
-		rm -f$(NAME)
+		rm -f $(NAME)
 
 re: fclean all
 	

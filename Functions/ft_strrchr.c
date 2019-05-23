@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:47:59 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 13:36:57 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/23 16:16:33 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/23 16:38:29 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char *ft_strchr(const char *s, int c)
 {
 	size_t i;
-	unsigned char *src1;
-	unsigned char *src2;
-
+	size_t j;
+	char c1;
+	
+	c1 = (char) c;
 	i = 0;
-	src1 = (unsigned char*) s1;
-	src2 = (unsigned char*) s2;
 
-	if (n == 0)
-		return (0);
-	while (i < n)
+
+	while (s[i])
+		i++;
+	while (i >= 0)
 	{
-		if (src1[i] == src2[i])
-		{
-			i++;
-		}
-		else
-			return (src1[i] - src2[i]);
+		if(s[i] == c)
+			return ((char*)s + i);
+		i--;
 	}
+	return(NULL);
+}
+int main()
+{
+	printf("%s\n", ft_strchr("Gorgeous George", 'e'));
+	printf("%s\n", strchr("Gorgeous George", 'e'));
 	return (0);
 }

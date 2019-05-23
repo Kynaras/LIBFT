@@ -1,37 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:47:59 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 13:36:57 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/23 13:58:24 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/23 15:36:02 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
-	unsigned char *src1;
-	unsigned char *src2;
+	size_t g;
+	size_t d;
 
+	d = ft_strlen(dst);
 	i = 0;
-	src1 = (unsigned char*) s1;
-	src2 = (unsigned char*) s2;
+	g = 0;
 
-	if (n == 0)
-		return (0);
-	while (i < n)
+	while (dst[i] && i < dstsize)
 	{
-		if (src1[i] == src2[i])
-		{
-			i++;
-		}
-		else
-			return (src1[i] - src2[i]);
+		i++;
 	}
-	return (0);
+
+	while (i + g < dstsize - 1 && src[g])
+	{
+		dst[i + g] = src[g];
+		g++;
+	}
+	if (i + g < dstsize)
+	{
+		dst[i + g] = '\0';
+	return (ft_strlen(src) + 2);
+	}
+	else
+		return (0);
+}
+
+int main()
+{
+	char d[5] = "Hi";
+	char *s = " Bye";
+	printf("%zu\n", ft_strlcat(d, s, 5));
 }

@@ -6,13 +6,13 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:52:20 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 12:43:22 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 13:42:48 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcat(char *restrict s1, const char *restrict s2)
+char *ft_strcat(char *s1, const char *s2)
 {
 	size_t i;
 	size_t i2;
