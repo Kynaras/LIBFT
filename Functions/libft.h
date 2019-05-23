@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:55:41 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 11:55:28 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 13:20:52 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memset(void *b, int c, size_t len);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strdup(const char *str);
-size_t	ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t len);
 int		ft_tolower(int c);

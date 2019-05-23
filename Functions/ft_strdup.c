@@ -6,11 +6,11 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:44:33 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 12:57:59 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 13:18:07 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strdup(const char *str)
 {
@@ -18,7 +18,7 @@ char *ft_strdup(const char *str)
 	char *dup;
 
 	i = 0;
-	dup = (char*)malloc(sizeof(char) * ft_strlen(str) + 1);
+	dup = (char*)malloc(sizeof(char) * strlen(str) + 1);
 	
 	if (dup == NULL)
 		return (NULL);
