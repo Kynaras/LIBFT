@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/23 13:25:01 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/23 13:26:29 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ $(NAME): $(SRC) $(HEADER)
 		ranlib $(NAME)
 
 clean:
-		rm -f $(OBJECT)
+		rm -f $(OBJECTS)
 
 fclean: clean
 		rm -f$(NAME)
