@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:18:58 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/22 09:10:23 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 10:31:36 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ char *ft_strncat(char *s1, const char *s2, size_t n)
 
 int main()
 {
-	char a[6] = "Hello";
-	char d[] = " Worldnewshour";
+	char *t = "Hello";
+	char *d = " Worldnewshour";
 
-	printf("%s", strncat(a, d, 8));
+	printf("%s", ft_strncat(t, d, 8));
 	
-	return(0);
+	return 0;
 }

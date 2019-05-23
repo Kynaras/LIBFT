@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 07:40:47 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/22 11:45:27 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/23 09:45:03 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void *ft_memset(void *b, int c, size_t len)
 {
 	size_t i;
-	char *str = (char*) b;
+	unsigned char *str = (unsigned char*) b;
 	unsigned char a = (unsigned char) c;
 
 	i = 0;
@@ -29,3 +29,10 @@ void *ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
+int main()
+{
+	char t[2] = "Hi";
+	
+	printf("%s", ft_memset(t, 'B', 5));
+	return (0);
+}
