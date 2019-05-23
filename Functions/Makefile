@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/23 13:15:33 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/23 13:25:01 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRC = ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
-OBJECT = $(SRC: .c=.o)
+OBJECTS = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror -c
 
