@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:45:23 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 15:26:04 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/24 13:17:37 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t len = 0;
+	size_t len;
 
+	len = 0;
 	while (s[len] != '\0')
 		len++;
-	return(len);
+	return (len);
 }

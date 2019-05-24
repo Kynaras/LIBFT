@@ -6,22 +6,23 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:34:49 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 11:25:47 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/24 13:13:20 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t i;
 
 	i = 0;
-
-	while(s1[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		if(s1[i] == s2[i])
+		if (s1[i] == s2[i])
 			i++;
 		else
 			return (s1[i] - s2[i]);
 	}
-	return s1[i] - s2[i];
+	return (s1[i] - s2[i]);
 }
