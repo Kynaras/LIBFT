@@ -6,9 +6,10 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:58:24 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/23 15:36:02 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:02:05 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
@@ -32,18 +33,21 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i + g] = src[g];
 		g++;
 	}
-	if (i + g < dstsize)
+	if (i + g < dstsize - 1)
 	{
 		dst[i + g] = '\0';
-	return (ft_strlen(src) + 2);
+	return (ft_strlen(dst));
 	}
 	else
-		return (0);
+		return (ft_strlen(src) + i);
 }
 
 int main()
 {
-	char d[5] = "Hi";
-	char *s = " Bye";
-	printf("%zu\n", ft_strlcat(d, s, 5));
+	char *t = "Hello to";
+	char *p = " everyone";
+	printf("%zu\n", ft_strlcat(t, p, 50));
+	//printf("%zu\n", strlcat(t, p, 14));
+	printf("%s\n", t);
+	return (0);
 }

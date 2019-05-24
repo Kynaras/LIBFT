@@ -1,0 +1,6 @@
+int main()
+{
+	printf("%s\n", ft_strrchr("Gorgeous George", '\0'));
+	printf("%s\n", strrchr("Gorgeous George", '\0'));
+	return (0);
+}

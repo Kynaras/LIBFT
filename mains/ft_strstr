@@ -1,0 +1,6 @@
+int main()
+{
+	printf("%s\n", ft_strstr("Hello, my name is Kyle find the ant", ""));
+	printf("%s\n", strstr("Hello, my name is Kyle find the ant", ""));
+	return (0);
+}

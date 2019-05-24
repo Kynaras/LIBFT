@@ -1,0 +1,6 @@
+int	main()
+{
+	printf("%i", ft_strcmp("Hello", "Hello little"));
+	printf("%i", strcmp("Hello", "Hello little"));
+	return 0;
+}

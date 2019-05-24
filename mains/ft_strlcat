@@ -1,0 +1,9 @@
+int main()
+{
+	char t[20] = "Hello to";
+	char  *p = " everyone";
+	printf("%zu\n", ft_strlcat(t, p, 20));
+	//printf("%zu\n", strlcat(t, p, 20));
+	printf("%s", t);
+	return (0);
+}

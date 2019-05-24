@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 16:16:33 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 10:32:24 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/24 07:19:32 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/24 10:20:58 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char *ft_strstr(const char *haystack, const char *needle)
 {
 	size_t i;
-	char c1;
-	
-	c1 = (char) c;
+	size_t j;
+	size_t o;
+
 	i = 0;
+	j = 0;
+	
+	if(needle[j] == '\0')
+		return ((char*)haystack);
 
-
-	while (s[i])
-		i++;
-	while (i >= 0)
+	while(haystack[i] != '\0')
 	{
-		if(s[i] == c)
-			return ((char*)s + i);
-		i--;
+		while(haystack[i+j] == needle[j] && needle[j] != '\0')
+		{
+			j++;
+		}
+		if (needle[j] == '\0')
+			return ((char*)haystack + i);
+		i++;
+		j = 0;
 	}
-	return(NULL);
+	return (NULL);
 }
