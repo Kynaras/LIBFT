@@ -1,0 +1,11 @@
+int main()
+{
+	char	*c;
+	char	**d;
+
+	c = (void*)malloc(5 * sizeof(char));
+	c[0] = 'P';
+	d = &c;
+	ft_memdel((void**)d);
+	printf("%s\n", *d);
+}

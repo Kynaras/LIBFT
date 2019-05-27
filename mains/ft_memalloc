@@ -1,0 +1,18 @@
+#include "libft.h"
+
+int	main()
+{
+	char *i;
+	size_t j;
+
+	j = 0;
+	i = ft_memalloc(360000);
+
+	while(j < 380000)
+	{
+		i[j] = 'b';
+		j++;
+	}
+	printf("%c", i[35500]);
+	return (0);
+}

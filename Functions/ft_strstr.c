@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 07:19:32 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 13:23:00 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/27 09:01:20 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 {
 	size_t i;
 	size_t j;
-	size_t o;
 
 	i = 0;
 	j = 0;

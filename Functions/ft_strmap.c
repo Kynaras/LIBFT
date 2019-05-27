@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 11:23:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/27 09:01:06 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/27 15:43:39 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/27 16:03:03 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char ft_up(char w)
 {
-	size_t i;
+	w = w + 1;
+	return ('H');
+}
+
+char *ft_strmap(char const *s, char (*f)(char))
+{
+	unsigned int i;
+	char *n;
 
 	i = 0;
-	while (s1[i] != '\0' && i < n)
+
+	while (s[i])
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		n = (char*)malloc(i * sizeof(char) + 1);
+		n[i] = f(s[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	n[i] = '\0';
+	return (n);
+}
+
+int main()
+{
+	char const s[] = "Hello";
+	printf("%s", ft_strmap(s, ft_up));
+	return (0);
 }

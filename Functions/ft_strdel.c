@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 11:23:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/27 09:01:06 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/27 13:06:49 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/27 13:51:29 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void ft_strdel(char **as)
 {
-	size_t i;
-
-	i = 0;
-	while (s1[i] != '\0' && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	free(*as);
+	*as = (NULL);
 }

@@ -1,0 +1,14 @@
+#include "libft.h"
+
+void ft_up(unsigned int h, char *w)
+{
+	*w = *w + h;
+}
+
+int main()
+{
+	char s[] = "Hello";
+	ft_striteri(s, ft_up);
+	printf("%s", s);
+	return (0);
+}

@@ -1,0 +1,6 @@
+int main()
+{
+	char *b = ft_strnew(10);
+	printf("%s\n", b);
+	return (0);
+}

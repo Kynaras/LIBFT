@@ -1,0 +1,12 @@
+void ft_test(char *p)
+{
+	*p = 'A';
+}
+
+int main()
+{
+	char c[] = "Tess";
+	ft_striter(c, ft_strclr);
+	printf("%s\n", c);
+	return (0);
+}
