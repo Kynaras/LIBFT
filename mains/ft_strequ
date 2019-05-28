@@ -1,0 +1,8 @@
+int main()
+{
+	char *s1 = "Hello";
+	char *s2 = "Hello";
+
+	printf("%i", ft_strequ(s1, s2));
+	return (0);
+}

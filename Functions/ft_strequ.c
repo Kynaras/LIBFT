@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:39 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/28 07:29:00 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/28 08:16:10 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/28 08:31:51 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int ft_strequ(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	char			*n;
-
-	i = 0;
-	n = (char*)malloc(ft_strlen(s) * sizeof(char) + 1);
-	while (s[i] != '\0')
-	{
-		n[i] = f(s[i]);
-		i++;
-	}
-	n[i] = '\0';
-	return (n);
+	// Ternary operator. Hopefully it will work :D
+	return(ft_strcmp(s1, s2) ? 0 : 1);
 }

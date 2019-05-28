@@ -1,0 +1,12 @@
+char ft_up(unsigned int h, char w)
+{
+	w = w + h;
+	return w;
+}
+
+int main()
+{
+	char const *s = "Hello";
+	printf("%s\n", ft_strmapi(s, ft_up));
+	return (0);
+}

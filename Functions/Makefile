@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/27 13:50:07 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/28 13:38:34 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRC = ft_atoi.c \
 		ft_strncpy.c \
 		ft_strnew.c \
 		ft_strstr.c \
+		ft_strsub.c \
 		ft_tolower.c \
 		ft_toupper.c \
 

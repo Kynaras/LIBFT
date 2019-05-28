@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 14:20:44 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/27 15:32:03 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/28 10:55:23 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	ft_striter(char *s, void (*f) (char *))
 {
-	unsigned int i;
+	size_t i;
+
 	i = 0;
-	
 	while (s[i] != '\0')
 	{
 		f(&s[i]);
 		i++;
 	}
 }
-
