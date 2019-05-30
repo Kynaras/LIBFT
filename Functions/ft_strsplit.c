@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:55:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/29 12:12:43 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/30 14:24:14 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,12 +123,3 @@ char **ft_strsplit(char const *s, char c)
 	}
 	return (arr);
 }
-
-int main()
-{
-	char **test = ft_strsplit("Together***we*are****strong**", '*');
-
-	printf("%s\n", test[2]);
-	return (0);
-}
-

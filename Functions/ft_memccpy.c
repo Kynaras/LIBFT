@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:03:35 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 12:53:09 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/30 12:30:43 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		d[i] = s[i];
 		i++;
 	}
+	if (s[i] == ch)
+		d[i] = c;
 	if (i == n)
 		return (NULL);
 	else

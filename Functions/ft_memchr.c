@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:44:55 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 13:05:58 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/30 12:43:19 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/30 14:23:03 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (src[i] == ch)
+		if ((unsigned char)src[i] == ch)
 			return ((char*)s + i);
 		else
 			i++;
