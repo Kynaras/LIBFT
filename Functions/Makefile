@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/05/28 13:38:34 by keverett         ###   ########.fr        #
+#    Updated: 2019/05/30 10:48:49 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = ft_atoi.c \
 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
+		ft_itoa.c \
 		ft_memalloc.c \
 		ft_memccpy.c \
 		ft_memchr.c \
@@ -29,6 +30,14 @@ SRC = ft_atoi.c \
 		ft_memdel.c \
 		ft_memmove.c \
 		ft_memset.c \
+		ft_putstr.c \
+		ft_putstr_fd.c \
+		ft_putchar.c \
+		ft_putchar_fd.c \
+		ft_putendl.c \
+		ft_putendl_fd.c \
+		ft_putnumber.c \
+		ft_putnumber_fd.c \
 		ft_strcat.c \
 		ft_strchr.c \
 		ft_strclr.c \

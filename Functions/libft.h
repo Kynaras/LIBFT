@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:55:41 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/28 13:38:22 by keverett         ###   ########.fr       */
+/*   Updated: 2019/05/30 10:49:23 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int i);
 int		ft_isdigit(int d);
 int		ft_isprint(int p);
+char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -33,6 +34,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	ft_memdel(void **ap);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);

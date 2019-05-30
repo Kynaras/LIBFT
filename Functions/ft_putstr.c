@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 12:41:27 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/30 07:39:19 by keverett         ###   ########.fr       */
+/*   Created: 2019/05/30 09:02:18 by keverett          #+#    #+#             */
+/*   Updated: 2019/05/30 10:33:32 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnew(size_t size)
+void	ft_putstr(char const *s)
 {
-	char *c;
-	c = (char *)malloc(sizeof (char) * size);
-	if (c == NULL)
-		return (NULL);
-	ft_memset(c, '\0', size + 1);
-
-	return (c);
+	while(*s) 
+		ft_putchar(*s++);
 }
