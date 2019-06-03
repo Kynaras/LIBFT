@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:55:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/30 14:24:14 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/03 13:21:34 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,13 @@ static int st_count(char const *s, char c)
 	strings = 0;
 	while (s[i] != '\0')
 	{
-		if(s[i] != c)
+		if(s[i] != c && d == 1)
 		{
-			if (d == 1)
-			{
-				d = 0;
-				strings++;
-			}
+			d = 0;
+			strings++;
 		}
-		if(s[i] == c)
-		{
-			if (d == 0)
-				d = 1;
-		}
+		if(s[i] == c && d == 0)
+			d = 1;
 		i++;
 	}
 	return(strings);
@@ -52,17 +46,13 @@ static char	const	*st_findstring(char const *s, char c, size_t w)
 	strings = -1;
 	while (s[i] != '\0')
 	{
-		if(s[i] != c)
+		if(s[i] != c && d == 1)
 		{
-			if (d == 1)
-			{
-				d = 0;
-				strings++;
-			}
+			d = 0;
+			strings++;
 		}
-		if(s[i] == c)
-			if (d == 0)
-				d = 1;
+		if(s[i] == c && d == 0)
+			d = 1;
 		if(strings == w)
 			return ((s + i));
 		i++;
@@ -77,7 +67,7 @@ static size_t	st_strlen(char const *s, char c)
 	i = 0;
 	while (s[i] != 0)
 	{
-		if (s[i] != c)
+		if (s[i] == c)
 			return (i);
 		i++;
 	}
@@ -109,7 +99,7 @@ char **ft_strsplit(char const *s, char c)
 	size  = st_count(s, c);
 	i = 0;
 	j = 0;
-	arr = (char**)malloc(st_count(s, c) * sizeof(char *));
+	arr = (char**)malloc(st_count(s, c) * sizeof(char *) + 1);
 	if (arr == NULL)
 		return (NULL);
 	while (i < size)
@@ -121,5 +111,6 @@ char **ft_strsplit(char const *s, char c)
 		st_alloc(st_findstring(s, c, i), arr,  c, i);
 		i++;
 	}
+	arr[i] = NULL;
 	return (arr);
 }
