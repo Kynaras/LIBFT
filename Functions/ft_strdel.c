@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:06:49 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/28 10:36:09 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:42:19 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void ft_strdel(char **as)
 {
-	free(*as);
-	*as = (NULL);
+	if (as != NULL && *as != NULL)
+	{
+		free(*as);
+		*as = (NULL);
+	}
 }
