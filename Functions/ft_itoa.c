@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 06:59:52 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/04 09:26:36 by event            ###   ########.fr       */
+/*   Updated: 2019/06/05 09:45:38 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,12 @@ char *ft_itoa(int n)
 
 	if (n == -2147483648)
 	{
-		str = "-2147483648";
+		str = ft_memalloc(12 * sizeof(char) + 1);
+		str = ft_strcpy(str, "-2147483648");
 		return (str);
 	}
 	size = st_malloc(n);
-	str = ft_strnew(size + 1);
+	str = ft_strnew(size);
 	rem = 0;
 	if (str == NULL)
 		return NULL;

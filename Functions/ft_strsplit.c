@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:55:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/03 13:21:34 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/05 09:14:26 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,9 @@ char **ft_strsplit(char const *s, char c)
 	size_t size;
 	size_t j;
 	char **arr;
-	
+
+	if (s == NULL)
+		return (NULL);
 	size  = st_count(s, c);
 	i = 0;
 	j = 0;
