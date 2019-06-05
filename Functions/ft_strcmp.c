@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:34:49 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/31 09:28:11 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/05 07:47:55 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;
-
 	i = 0;
 	while (str1[i] != '\0')
 	{
