@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:01:29 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/04 15:36:31 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:30:53 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t		i;
+	size_t				i;
 	unsigned char		*d;
 	unsigned const char	*s;
 

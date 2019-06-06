@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:50:16 by keverett          #+#    #+#             */
-/*   Updated: 2019/05/24 13:15:02 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:22:00 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-    size_t i;
-   
+	size_t i;
+
 	i = 0;
-    while (src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return(dest);
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

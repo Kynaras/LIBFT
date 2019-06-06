@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:02:18 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/05 09:53:29 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:56:01 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	ft_putstr(char const *s)
 {
 	if (s != NULL)
-		while(*s) 
+		while (*s)
 			ft_putchar(*s++);
 }

@@ -6,12 +6,13 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 11:33:39 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/05 12:04:01 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:11:05 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-t_list *ft_lstnew(void const *content, size_t content_size)
+
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *new;
 

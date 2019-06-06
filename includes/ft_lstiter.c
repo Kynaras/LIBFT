@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 08:34:27 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/06 08:39:25 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:13:43 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,3 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 		current = (*current).next;
 	}
 }
-
-
-

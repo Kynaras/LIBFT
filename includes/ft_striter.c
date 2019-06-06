@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 14:20:44 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/04 16:13:04 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:34:05 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_striter(char *s, void (*f) (char*))
 {
 	size_t i;
+
 	if (s != NULL && f != NULL)
 	{
 		i = 0;

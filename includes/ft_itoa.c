@@ -6,13 +6,13 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 06:59:52 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/05 09:45:38 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:53:30 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int st_malloc(int n)
+static int	st_malloc(int n)
 {
 	int size;
 	int rem;
@@ -26,16 +26,16 @@ static int st_malloc(int n)
 	}
 	if (n == 0)
 		size++;
-	while(n != 0)
+	while (n != 0)
 	{
 		rem = n % 10;
-		n = n/10;
+		n = n / 10;
 		size++;
 	}
-	return(size);
+	return (size);
 }
 
-static char *st_string(char *str, int size, int n)
+static char	*st_string(char *str, int size, int n)
 {
 	int rem;
 
@@ -50,19 +50,18 @@ static char *st_string(char *str, int size, int n)
 	while (n != 0)
 	{
 		rem = n % 10;
-		str[size] = (rem > 9)? (rem-10) + 'a' : rem + '0';
-		n = n/10;
+		str[size] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
+		n = n / 10;
 		size--;
 	}
 	return (str);
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-
-	int rem;
-	int size;
-	char *str;
+	int		rem;
+	int		size;
+	char	*str;
 
 	if (n == -2147483648)
 	{
@@ -74,9 +73,8 @@ char *ft_itoa(int n)
 	str = ft_strnew(size);
 	rem = 0;
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 	size--;
 	str = st_string(str, size, n);
 	return (str);
 }
-

@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:22:57 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/05 08:04:30 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:24:09 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t len)
 	{
 		dest[i] = '\0';
 		i++;
-		
 	}
 	return (dest);
 }

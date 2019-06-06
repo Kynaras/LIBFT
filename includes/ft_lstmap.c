@@ -6,13 +6,13 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 09:11:16 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/06 11:59:45 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:15:12 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list *ft_lstaddr(t_list **alst, t_list *newa)
+static t_list	*ft_lstaddr(t_list **alst, t_list *newa)
 {
 	if (alst != NULL)
 	{
@@ -21,7 +21,8 @@ static t_list *ft_lstaddr(t_list **alst, t_list *newa)
 	}
 	return (newa);
 }
-t_list *ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
+
+t_list			*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 {
 	t_list *current;
 	t_list *new;
@@ -41,6 +42,5 @@ t_list *ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 		tmp = ft_lstaddr(&tmp, f(current));
 		current = current->next;
 	}
-	return(new);
+	return (new);
 }
-

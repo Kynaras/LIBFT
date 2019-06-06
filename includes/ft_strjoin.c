@@ -6,18 +6,17 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:09:14 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/05 07:54:02 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:50:16 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *n;
-	size_t i;
-	size_t j;
-
+	char	*n;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
