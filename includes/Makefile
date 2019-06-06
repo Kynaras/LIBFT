@@ -6,7 +6,7 @@
 #    By: keverett <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 10:35:56 by keverett          #+#    #+#              #
-#    Updated: 2019/06/05 15:29:02 by keverett         ###   ########.fr        #
+#    Updated: 2019/06/06 09:53:27 by keverett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRC = ft_atoi.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
 		ft_memalloc.c \
 		ft_memccpy.c \
 		ft_memchr.c \

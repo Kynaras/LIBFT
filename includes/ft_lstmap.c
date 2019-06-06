@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:49:44 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/06 07:49:56 by keverett         ###   ########.fr       */
+/*   Created: 2019/06/06 09:11:16 by keverett          #+#    #+#             */
+/*   Updated: 2019/06/06 10:18:55 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+t_list *ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 {
-	char 			*n;
-	unsigned int	i;
+	t_list *current;
+	t_list *new;
 
-	i = 0;
-
-	if (s == NULL)
+	current = lst->next;
+	new = f(lst);
+	if (new == NULL)
 		return (NULL);
-	n = (char*)malloc(len  * sizeof (char) + 1);
-	if (n == NULL)
-		return (NULL);
-	while (i < len)
+	while (current != NULL)
 	{
-		n[i] = s[i + start];
-		i++;
+		if (f(current) == NULL)
+			return (NULL);
+		ft_lstadd(&new, f(current));
+		current = current->next;
 	}
-	n[i] = '\0';
-	return (n);
+	return(new);
 }
+
