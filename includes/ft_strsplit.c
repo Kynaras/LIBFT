@@ -6,7 +6,7 @@
 /*   By: keverett <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:55:38 by keverett          #+#    #+#             */
-/*   Updated: 2019/06/06 08:56:04 by keverett         ###   ########.fr       */
+/*   Updated: 2019/06/06 12:03:03 by keverett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,11 +115,4 @@ char **ft_strsplit(char const *s, char c)
 	}
 	arr[i] = NULL;
 	return (arr);
-}
-
-int main()
-{
-	char *s = "Hello***its**i";
-	ft_strsplit(s, '*');
-	return (0);
 }
